@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GestureConfig } from '@angular/material';
 
 import { PblNgridModule } from '@pebula/ngrid';
-// import { PblNgridDragModule } from '@pebula/ngrid/drag';
+import { PblNgridDragModule } from '@pebula/ngrid/drag';
 import { PblNgridTargetEventsModule } from '@pebula/ngrid/target-events';
 import { PblNgridTransposeModule } from '@pebula/ngrid/transpose';
 import { PblNgridBlockUiModule } from '@pebula/ngrid/block-ui';
