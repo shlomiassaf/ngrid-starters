@@ -8,10 +8,6 @@
 <div *pblNgridNoDataRef class="pbl-ngrid-no-data"><span>No Results</span></div>
 <!-- DEFINING DEFAULT NO DATA TEMPLATE -->
 
-<pbl-ngrid-drag-resize *pblNgridCellResizerRef="let ctx" [context]="ctx" [grabAreaWidth]="8">
-  <span class="pbl-ngrid-column-resizer-handle"></span>
-</pbl-ngrid-drag-resize>
-<span *pblNgridCellDraggerRef="let ctx" [pblNgridColumnDrag]="ctx" cdkDragRootElementClass="cdk-drag column-reorder-handle" ></span>
 
 <!-- DEFINING DEFAULT ADMIN MODULE WIDE COLUMNS FOR PBL-NGRID -->
 <div *pblNgridCellDef="'*'; value as value;">{{value}}</div>
@@ -27,8 +23,6 @@
 
 <div *pblNgridHeaderCellTypeDef="'drag_and_drop_handle'"></div>
 <div *pblNgridCellTypeDef="'drag_and_drop_handle'; let ctx" [pblNgridRowDrag]="ctx" style="cursor: move">
-  <mat-icon pblDragHandle class="pbl-ngrid-row-drag-handle">drag_handle</mat-icon>
-  <div class="pbl-ngrid-row-drag-placeholder" *cdkDragPlaceholder></div>
 </div>
 
 <!-- START RATINGS -->
