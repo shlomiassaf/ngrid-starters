@@ -26,7 +26,7 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     MATERIAL,
     PblNgridModule.withCommon([ { component: CommonTableTemplatesComponent } ]),
-    // PblNgridDragModule.withDefaultTemplates(),
+    PblNgridDragModule,
     PblNgridTargetEventsModule,
     PblNgridBlockUiModule,
     PblNgridTransposeModule,
