@@ -1,0 +1,50 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+
+// Custom Theming for NGrid Material
+@import '~@pebula/ngrid-material/theming';
+
+@import './variables';
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core($typography-config);
+
+// Set the typography for the table
+// In this instance, its identical to the app's typography but we can provide a different setup.
+@include mat-pbl-ngrid-typography($typography-config);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($ngrid-material-starter-theme);
+
+// Include theme styles for the grid
+@include mat-pbl-ngrid-theme($ngrid-material-starter-theme);
+
+// Set the spacing style of the grid (row / cell spacing) using one of 2 presets.
+// "mat-pbl-ngrid-spacing" accept one of 2 values: "original" or "narrow" ("original" is the default)
+@include mat-pbl-ngrid-spacing();
+
+// If you want to add a narrow style:
+.pbl-ngrid.slim {
+  @include mat-pbl-ngrid-spacing('narrow');
+}
+
+// "mat-pbl-ngrid-spacing" is just a wrapper around "pbl-ngrid-spacing", instead of using one of the 2 presets you can manually setup the spacing:
+/*
+  @include pbl-ngrid-spacing((
+    header-row-height: 30px,
+    row-height: 26px,
+    footer-row-height: 30px,
+    row-spacing: 24px,
+    cell-spacing: 12px,
+  ));
+*/
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
