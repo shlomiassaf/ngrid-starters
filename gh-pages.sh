@@ -3,6 +3,8 @@ cp dist/ngrid-material-starter/index.html dist/ngrid-material-starter/404.html
 
 cd dist/ngrid-material-starter
 
+git config user.email "shlomiasaf@gmail.com"
+git config user.name "Shlomi Assaf"
 git init
 git remote add origin git@github.com:shlomiassaf/ngrid-material-starter.git
 git add .
