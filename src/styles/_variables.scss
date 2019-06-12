@@ -10,4 +10,6 @@ $ngrid-material-starter-accent: mat-palette($mat-pink, A200, A100, A400);
 $ngrid-material-starter-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
+
 $ngrid-material-starter-theme: mat-light-theme($ngrid-material-starter-primary, $ngrid-material-starter-accent, $ngrid-material-starter-warn);
+$ngrid-material-starter-theme: pbl-light-theme($ngrid-material-starter-theme);

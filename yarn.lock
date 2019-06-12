@@ -288,15 +288,15 @@
     tree-kill "1.2.1"
     webpack-sources "1.3.0"
 
-"@pebula/ngrid-material@^1.0.0-alpha.18":
-  version "1.0.0-alpha.18"
-  resolved "https://registry.yarnpkg.com/@pebula/ngrid-material/-/ngrid-material-1.0.0-alpha.18.tgz#923168c1794f4dfa002515a61b712a20e87f227a"
+"@pebula/ngrid-material@^1.0.0-alpha.20":
+  version "1.0.0-alpha.20"
+  resolved "https://registry.yarnpkg.com/@pebula/ngrid-material/-/ngrid-material-1.0.0-alpha.20.tgz#43034d77b7cdf67797b2a1569def047a747918f0"
   dependencies:
     tslib "^1.9.0"
 
-"@pebula/ngrid@^1.0.0-alpha.18":
-  version "1.0.0-alpha.18"
-  resolved "https://registry.yarnpkg.com/@pebula/ngrid/-/ngrid-1.0.0-alpha.18.tgz#28c214024826102370c6061fc98a552ec83cdb5e"
+"@pebula/ngrid@^1.0.0-alpha.20":
+  version "1.0.0-alpha.20"
+  resolved "https://registry.yarnpkg.com/@pebula/ngrid/-/ngrid-1.0.0-alpha.20.tgz#a6cfeb595eaae178c7eb6b5907bb489b8a3713a6"
   dependencies:
     tslib "^1.9.0"
 
