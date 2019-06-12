@@ -33,7 +33,11 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      # run tests!
+      # deploy
+      - add_ssh_keys:
+          fingerprints:
+            - "72:ea:7b:13:5a:65:4b:4e:8f:47:4b:7b:29:3a:15:7d"
+
       - run:
           name: Running gh-pages
           command: bash ./gh-pages.sh
