@@ -3,9 +3,9 @@ cp dist/ngrid-material-starter/index.html dist/ngrid-material-starter/404.html
 
 cd dist/ngrid-material-starter
 
+git init
 git config user.email "shlomiasaf@gmail.com"
 git config user.name "Shlomi Assaf"
-git init
 git remote add origin git@github.com:shlomiassaf/ngrid-material-starter.git
 git add .
 git commit -m "update"
