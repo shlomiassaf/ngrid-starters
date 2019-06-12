@@ -35,4 +35,5 @@ jobs:
 
       # run tests!
       - run:
-          command: gh-pages
+          name: Running gh-pages
+          command: bash ./gh-pages.sh
