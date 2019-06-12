@@ -1,4 +1,4 @@
-ng build ngrid-material-starter --prod --base-href ngrid-material-starter
+node_modules/.bin/ng build ngrid-material-starter --prod --base-href ngrid-material-starter
 cp dist/ngrid-material-starter/index.html dist/ngrid-material-starter/404.html
 
 cd dist/ngrid-material-starter
