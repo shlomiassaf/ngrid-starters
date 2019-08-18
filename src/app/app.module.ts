@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { GestureConfig } from '@angular/material';
+import { GestureConfig } from '@angular/material/core';
 
 import { PblNgridModule } from '@pebula/ngrid';
 import { PblNgridDragModule } from '@pebula/ngrid/drag';

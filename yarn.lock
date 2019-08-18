@@ -107,21 +107,21 @@
     "@angular-devkit/core" "8.2.2"
     rxjs "6.4.0"
 
-"@angular/animations@~8.2.2":
+"@angular/animations@8.2.2":
   version "8.2.2"
   resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-8.2.2.tgz#9e4162d242302f9b480cd967c7dccf4b07cdf435"
   dependencies:
     tslib "^1.9.0"
 
-"@angular/cdk-experimental@^7.3.7":
-  version "7.3.7"
-  resolved "https://registry.yarnpkg.com/@angular/cdk-experimental/-/cdk-experimental-7.3.7.tgz#c7e52aa07368ec5ab37bf8064571aadefd734b99"
+"@angular/cdk-experimental@^8.1.3":
+  version "8.1.3"
+  resolved "https://registry.yarnpkg.com/@angular/cdk-experimental/-/cdk-experimental-8.1.3.tgz#f9fc00d95a0a23265c3b358cc4c09166eda3a55a"
   dependencies:
     tslib "^1.7.1"
 
-"@angular/cdk@~7.3.7":
-  version "7.3.7"
-  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-7.3.7.tgz#ce1ad53ba04beb9c8e950acc5691ea0143753764"
+"@angular/cdk@~8.1.3":
+  version "8.1.3"
+  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-8.1.3.tgz#c791b4ae950bd015c4f618204e4f974e2dd64254"
   dependencies:
     tslib "^1.7.1"
   optionalDependencies:
@@ -150,15 +150,15 @@
     universal-analytics "^0.4.20"
     uuid "^3.3.2"
 
-"@angular/common@~8.2.2":
+"@angular/common@8.2.2":
   version "8.2.2"
   resolved "https://registry.yarnpkg.com/@angular/common/-/common-8.2.2.tgz#367d5d80fec3f37be3e1bcd1fc22091d79cb4a6f"
   dependencies:
     tslib "^1.9.0"
 
-"@angular/compiler-cli@~9.0.0-next.2":
-  version "9.0.0-next.2"
-  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-9.0.0-next.2.tgz#c8907665db7e49a6ddcc07c52d20bf487d19e62e"
+"@angular/compiler-cli@8.2.2":
+  version "8.2.2"
+  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-8.2.2.tgz#0b66157233ca2581e6b478a42150bea992230c8b"
   dependencies:
     canonical-path "1.0.0"
     chokidar "^2.1.1"
@@ -171,47 +171,47 @@
     tslib "^1.9.0"
     yargs "13.1.0"
 
-"@angular/compiler@~8.2.2":
+"@angular/compiler@8.2.2":
   version "8.2.2"
   resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-8.2.2.tgz#382a0ef9abcbc02ca1426945754d263ce9b49073"
   dependencies:
     tslib "^1.9.0"
 
-"@angular/core@~8.2.2":
+"@angular/core@8.2.2":
   version "8.2.2"
   resolved "https://registry.yarnpkg.com/@angular/core/-/core-8.2.2.tgz#f99a21461fbd6506f73493d5ae8d7027f5a0751a"
   dependencies:
     tslib "^1.9.0"
 
-"@angular/forms@~8.2.2":
+"@angular/forms@8.2.2":
   version "8.2.2"
   resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-8.2.2.tgz#8e06255942615b6d4b550f645d5e647d600f84c1"
   dependencies:
     tslib "^1.9.0"
 
-"@angular/language-service@~8.2.2":
+"@angular/language-service@8.2.2":
   version "8.2.2"
   resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-8.2.2.tgz#38bda29260850e78132e89a4c370cbaf118c3062"
 
-"@angular/material@^7.3.7":
-  version "7.3.7"
-  resolved "https://registry.yarnpkg.com/@angular/material/-/material-7.3.7.tgz#dcd95e6618ba6254c5880efee1aad349cf5b9140"
+"@angular/material@^8.1.3":
+  version "8.1.3"
+  resolved "https://registry.yarnpkg.com/@angular/material/-/material-8.1.3.tgz#1e65a6e02196348413cb073da3255771116c7618"
   dependencies:
     tslib "^1.7.1"
 
-"@angular/platform-browser-dynamic@~8.2.2":
+"@angular/platform-browser-dynamic@8.2.2":
   version "8.2.2"
   resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-8.2.2.tgz#2d4e348dc204a57757f44d78e09174955890ad3c"
   dependencies:
     tslib "^1.9.0"
 
-"@angular/platform-browser@~8.2.2":
+"@angular/platform-browser@8.2.2":
   version "8.2.2"
   resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-8.2.2.tgz#e2781b6b3e3079efebf3089d544624bd6a702894"
   dependencies:
     tslib "^1.9.0"
 
-"@angular/router@~8.2.2":
+"@angular/router@8.2.2":
   version "8.2.2"
   resolved "https://registry.yarnpkg.com/@angular/router/-/router-8.2.2.tgz#a56dd088553521754e493ba5e9e47c674bdd49f2"
   dependencies:
@@ -305,21 +305,21 @@
     tree-kill "1.2.1"
     webpack-sources "1.3.0"
 
-"@pebula/ngrid-material@^1.0.0-alpha.22":
-  version "1.0.0-alpha.22"
-  resolved "https://registry.yarnpkg.com/@pebula/ngrid-material/-/ngrid-material-1.0.0-alpha.22.tgz#aa562d77f11ff53f755049c893eabd4b829c704f"
+"@pebula/ngrid-material@^1.0.0-rc.0":
+  version "1.0.0-rc.0"
+  resolved "https://registry.yarnpkg.com/@pebula/ngrid-material/-/ngrid-material-1.0.0-rc.0.tgz#38f8ae8282470014e3bd5844fe1e8781c6654552"
   dependencies:
     tslib "^1.9.0"
 
-"@pebula/ngrid@^1.0.0-alpha.22":
-  version "1.0.0-alpha.22"
-  resolved "https://registry.yarnpkg.com/@pebula/ngrid/-/ngrid-1.0.0-alpha.22.tgz#9db49480a446db91f4b97d9b9ca62e0f832dc9ac"
+"@pebula/ngrid@^1.0.0-rc.0":
+  version "1.0.0-rc.0"
+  resolved "https://registry.yarnpkg.com/@pebula/ngrid/-/ngrid-1.0.0-rc.0.tgz#c563ea4d6d19c0ff1b66dfd652f725c54b7a37d6"
   dependencies:
     tslib "^1.9.0"
 
-"@pebula/utils@^1.0.0-alpha.3":
-  version "1.0.0-alpha.3"
-  resolved "https://registry.yarnpkg.com/@pebula/utils/-/utils-1.0.0-alpha.3.tgz#aeb30d40bd7a2fd56d00769efdec3392195310b5"
+"@pebula/utils@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@pebula/utils/-/utils-1.0.0.tgz#c92a55148c2d99d780e0e920977e637874bd2550"
   dependencies:
     tslib "^1.9.0"
 
