@@ -21,4 +21,9 @@
            (cellClick)="$event.context && $event.context.startEdit()"
            style="height: 500px"
            class="pbl-ngrid-cell-ellipsis pbl-ngrid-header-cell-ellipsis">
+
+  <div *pblNgridCellDef="'sales'; row as user">
+    <mat-icon>check</mat-icon>
+  </div>
+
 </pbl-ngrid>
