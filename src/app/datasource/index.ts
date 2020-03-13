@@ -13,7 +13,7 @@ export interface Seller {
 
 export async function getSellers(): Promise<Seller[]> {
   return new Promise<Seller[]>( (resolve, reject) => {
-    require.ensure([], () => {
+    (require as any).ensure([], () => {
       try {
         resolve(require('./sellers.json'));
       } catch (err) {

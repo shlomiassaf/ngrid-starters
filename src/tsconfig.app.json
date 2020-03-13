@@ -9,6 +9,12 @@
     "polyfills.ts"
   ],
   "include": [
-    "src/**/*.d.ts"
-  ]
+    "src/**/*.d.ts",
+    "src/typings.d.ts"
+  ],
+  "angularCompilerOptions": {
+    "enableIvy": true,
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
+  }
 }

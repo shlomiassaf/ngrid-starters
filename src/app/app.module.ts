@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+import { NgModule, ComponentFactoryResolver } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { GestureConfig } from '@angular/material/core';
 
 import { PblNgridModule } from '@pebula/ngrid';
 import { PblNgridDragModule } from '@pebula/ngrid/drag';
@@ -19,12 +19,9 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CommonTableTemplatesComponent
   ],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
+    CommonModule,
     MATERIAL,
     PblNgridModule.withCommon([ { component: CommonTableTemplatesComponent } ]),
     PblNgridDragModule.withDefaultTemplates(),
@@ -36,9 +33,37 @@ import { AppComponent } from './app.component';
     PblNgridStatePluginModule,
     PblNgridMaterialModule,
   ],
+  exports: [
+    MATERIAL,
+    PblNgridModule,
+    PblNgridDragModule,
+    PblNgridTargetEventsModule,
+    PblNgridBlockUiModule,
+    PblNgridTransposeModule,
+    PblNgridDetailRowModule,
+    PblNgridStickyModule,
+    PblNgridStatePluginModule,
+    PblNgridMaterialModule,
+  ],
+})
+export class AppModuleShared {
+}
+
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    CommonTableTemplatesComponent
+  ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    CommonModule,
+    AppModuleShared
+  ],
   providers: [
-    { provide: HAMMER_GESTURE_CONFIG, useClass: GestureConfig },
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
