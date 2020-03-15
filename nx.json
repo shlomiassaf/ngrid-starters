@@ -1,0 +1,21 @@
+{
+  "npmScope": "ngrid-material-starter",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "ngrid-material-starter": {
+      "tags": []
+    },
+    "ngrid-material-starter-e2e": {
+      "tags": [],
+      "implicitDependencies": [
+        "ngrid-material-starter"
+      ]
+    }
+  }
+}

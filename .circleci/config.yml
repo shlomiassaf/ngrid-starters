@@ -39,5 +39,13 @@ jobs:
             - "29:e0:4f:b3:5d:99:b5:b4:67:46:04:ef:00:e9:98:fe"
 
       - run:
+          name: Running E2E IVY
+          command: yarn e2e
+
+      - run:
+          name: Running E2E ViewEngine
+          command: yarn e2e:ve
+
+      - run:
           name: Running gh-pages
           command: bash ./gh-pages.sh
