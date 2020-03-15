@@ -4,6 +4,6 @@ describe('ngrid-material-starter', () => {
 
   it('should load grid with data', () => {
     cy.wait(500);
-    cy.matchImageSnapshot();
+    cy.get('pbl-ngrid').matchImageSnapshot();
   });
 });
