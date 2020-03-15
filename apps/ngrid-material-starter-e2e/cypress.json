@@ -9,6 +9,6 @@
   "videosFolder": "../../dist/cypress/apps/ngrid-material-starter-e2e/videos",
   "screenshotsFolder": "../../dist/cypress/apps/ngrid-material-starter-e2e/screenshots",
   "chromeWebSecurity": false,
-  "viewportHeight": 768,
-  "viewportWidth": 1366
+  "viewportHeight": 800,
+  "viewportWidth": 1200
 }
