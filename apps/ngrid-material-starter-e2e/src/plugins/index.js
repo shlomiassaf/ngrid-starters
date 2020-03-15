@@ -20,5 +20,6 @@ module.exports = (on, config) => {
 
   // Preprocess Typescript file using Nx helper
   on('file:preprocessor', preprocessTypescript(config));
+
   addMatchImageSnapshotPlugin(on, config);
 };

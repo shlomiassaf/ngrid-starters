@@ -125,6 +125,7 @@
           "builder": "@nrwl/cypress:cypress",
           "options": {
             "cypressConfig": "apps/ngrid-material-starter-e2e/cypress.json",
+            "headless": true,
             "tsConfig": "apps/ngrid-material-starter-e2e/tsconfig.e2e.json",
             "devServerTarget": "ngrid-material-starter:serve"
           },

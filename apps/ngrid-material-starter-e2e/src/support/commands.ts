@@ -26,5 +26,4 @@ declare global {
 addMatchImageSnapshotCommand({
   customSnapshotsDir: 'snapshots',
   customDiffDir: '../../dist/cypress/apps/ngrid-material-starter-e2e/__diffs__',
-  capture: 'viewport',
 });
