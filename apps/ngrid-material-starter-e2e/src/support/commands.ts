@@ -26,4 +26,6 @@ declare global {
 addMatchImageSnapshotCommand({
   customSnapshotsDir: 'snapshots',
   customDiffDir: '../../dist/cypress/apps/ngrid-material-starter-e2e/__diffs__',
+  failureThreshold: 0.1, // threshold for entire image
+  failureThresholdType: 'percent', // percent of image or number of pixels
 });
