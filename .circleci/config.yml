@@ -38,9 +38,17 @@ jobs:
           name: Running E2E IVY
           command: yarn e2e
 
+      - store_artifacts:
+          path: dist/cypress/apps/ngrid-material-starter-e2e
+          destination: IVY
+
       - run:
           name: Running E2E ViewEngine
           command: yarn e2e:ve
+
+      - store_artifacts:
+          path: dist/cypress/apps/ngrid-material-starter-e2e
+          destination: ViewEngine
 
       - run:
           name: Running gh-pages

@@ -24,5 +24,6 @@ declare global {
 
 // Cypress.env('updateSnapshots', true);
 addMatchImageSnapshotCommand({
-  customSnapshotsDir: 'snapshots'
+  customSnapshotsDir: 'snapshots',
+  customDiffDir: '../../dist/cypress/apps/ngrid-material-starter-e2e/__diffs__'
 });
