@@ -4,7 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:ve": "ng serve --configuration viewEngine",
     "build": "ng build",
+    "build:ve": "ng build --configuration viewEngine",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -23,8 +25,8 @@
     "@angular/platform-browser": "9.0.6",
     "@angular/platform-browser-dynamic": "9.0.6",
     "@angular/router": "9.0.6 ",
-    "@pebula/ngrid": "^2.0.0-alpha.1",
-    "@pebula/ngrid-material": "^2.0.0-alpha.1",
+    "@pebula/ngrid": "~2.0.0-rc.1",
+    "@pebula/ngrid-material": "~2.0.0-rc.1",
     "@pebula/utils": "^1.0.0",
     "core-js": "^2.5.4",
     "resize-observer-polyfill": "^1.5.1",

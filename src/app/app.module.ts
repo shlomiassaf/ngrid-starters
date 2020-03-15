@@ -63,6 +63,8 @@ export class AppModuleShared {
   ],
   providers: [
   ],
+  // TODO: Remove when not supporting ViewEngine, this is for non IVY compilations
+  entryComponents: [ CommonTableTemplatesComponent ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
