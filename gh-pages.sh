@@ -1,7 +1,7 @@
 node_modules/.bin/ng build ngrid-material-starter --prod --base-href ngrid-material-starter
-cp dist/ngrid-material-starter/index.html dist/ngrid-material-starter/404.html
+cp dist/apps/ngrid-material-starter/index.html dist/apps/ngrid-material-starter/404.html
 
-cd dist/ngrid-material-starter
+cd dist/apps/ngrid-material-starter
 
 git init
 git config user.email "shlomiasaf@gmail.com"
