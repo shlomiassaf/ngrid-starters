@@ -1,5 +1,9 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, VERSION } from '@angular/core';
 import { PblNgridComponent, createDS, columnFactory } from '@pebula/ngrid';
+
+import * as cdkPackageJson from '@angular/cdk/package.json';
+import * as ngridPackageJson from '@pebula/ngrid/package.json';
+import * as ngridMaterialPackageJson from '@pebula/ngrid-material/package.json';
 
 import { Seller, getSellers } from './datasource';
 
@@ -54,12 +58,19 @@ export class AppComponent {
 
   @ViewChild(PblNgridComponent, { static: true }) table: PblNgridComponent<Seller>;
 
+  versions = {
+    ng: VERSION.full,
+    cdk: cdkPackageJson.version,
+    ngrid: ngridPackageJson.version,
+    ngridMaterial: ngridMaterialPackageJson.version,
+  }
+
   constructor() {
     // ds.getCountries().then( c => COUNTRY_GETTER.data = c );
   }
 
   refresh(): void {
-    
+
     this.table.ds.refresh();
   }
 
