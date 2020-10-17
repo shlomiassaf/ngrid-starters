@@ -2154,17 +2154,17 @@
     yargs "^11.0.0"
     yargs-parser "10.0.0"
 
-"@pebula/ngrid-material@^2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@pebula/ngrid-material/-/ngrid-material-2.2.0.tgz#fe95473528876d8e6f7bd318645b546a10a64816"
-  integrity sha512-Qa+NRPmg3pzHEXrELRf6X+aHBLK/tQ0oiB+P1PfS/ptVfdZYRCPkj3Fp9J9CZecTyH0bEW/R5hu0xdEka5mEtQ==
+"@pebula/ngrid-material@^2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@pebula/ngrid-material/-/ngrid-material-2.2.1.tgz#1e0eaf4c46f622088f4e00cc35d1eadb838018a2"
+  integrity sha512-tMQQIEo41O8ljfvz5ZXOSU1W2Q6Q5GuTiGtcNAiWS6QX0aGPG8IvMCkJh7raP/UEd+0/GASQHJn0e3DBoW6lVg==
   dependencies:
     tslib "^2.0.0"
 
-"@pebula/ngrid@^2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@pebula/ngrid/-/ngrid-2.2.0.tgz#86a250ab85f49824945fc9d18b70f30f0bbb9a3a"
-  integrity sha512-IEcO/Ft3ssKapv1rA9ZY11Jf3PoRYDyjth3YJ7OcsKw70JmD/vxkc8ossHQZkMHJ/rJbyYISsoXn2Z/kAg4XDQ==
+"@pebula/ngrid@^2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@pebula/ngrid/-/ngrid-2.2.1.tgz#c6dfc20344c2a685d9065f725a03db035bfcc558"
+  integrity sha512-RsoHUkSJp0H1R+aLp1MZVF/bEkwMs8VL9lT1YP9nJINVGCrV8PW6MkEibGEqy+kWnv5qa4RK4NsUgirlGxRWDA==
   dependencies:
     tslib "^2.0.0"
 
@@ -10373,10 +10373,10 @@ typescript@4.0.2:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.0.2.tgz#7ea7c88777c723c681e33bf7988be5d008d05ac2"
   integrity sha512-e4ERvRV2wb+rRZ/IQeb3jm2VxBsirQLpQhdxplZ2MEzGvDkkMmPglecnNDfSUBivMjP93vRbngYYDQqQ/78bcQ==
 
-typescript@~3.9.6:
-  version "3.9.6"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.6.tgz#8f3e0198a34c3ae17091b35571d3afd31999365a"
-  integrity sha512-Pspx3oKAPJtjNwE92YS05HQoY7z2SFyOpHo9MqJor3BXAGNaPUs83CuVp9VISFkSjyRfiTpmKuAYGJB7S7hOxw==
+typescript@~4.0.0:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.0.3.tgz#153bbd468ef07725c1df9c77e8b453f8d36abba5"
+  integrity sha512-tEu6DGxGgRJPb/mVPIZ48e69xCn2yRmCgYmDugAVwmJ6o+0u1RI18eO7E7WBTLYLaEVVOhwQmcdhQHweux/WPg==
 
 ua-parser-js@0.7.21:
   version "0.7.21"
