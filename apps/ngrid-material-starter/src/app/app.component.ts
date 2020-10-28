@@ -8,9 +8,9 @@ import * as ngridMaterialPackageJson from '@pebula/ngrid-material/package.json';
 import { Seller, getSellers } from './datasource';
 
 const COUNTRY_GETTER = {
-  currency: row => COUNTRY_GETTER.data.countries[row.country].currencies[0],
-  name: row => COUNTRY_GETTER.flag(row) + ' ' + COUNTRY_GETTER.data.countries[row.country].name,
-  flag: row => COUNTRY_GETTER.data.countries[row.country].emoji,
+  currency: (row: Seller) => COUNTRY_GETTER.data.countries[row.country].currencies[0],
+  name: (row: Seller) => COUNTRY_GETTER.flag(row) + ' ' + COUNTRY_GETTER.data.countries[row.country].name,
+  flag: (row: Seller) => COUNTRY_GETTER.data.countries[row.country].emoji,
   data: undefined as any
 }
 
@@ -56,7 +56,7 @@ export class AppComponent {
 
   columns = COLUMNS.build();
 
-  @ViewChild(PblNgridComponent, { static: true }) table: PblNgridComponent<Seller>;
+  @ViewChild(PblNgridComponent, { static: true }) table!: PblNgridComponent<Seller>;
 
   versions = {
     ng: VERSION.full,
@@ -74,7 +74,7 @@ export class AppComponent {
     this.table.ds.refresh();
   }
 
-  dropped(e) {
+  dropped(e: unknown) {
     console.log(e);
   }
 }
