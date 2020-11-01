@@ -27,7 +27,10 @@
     "update:check": "ng update",
     "dep-graph": "nx dep-graph",
     "workspace-schematic": "nx workspace-schematic",
-    "help": "nx help"
+    "help": "nx help",
+    "gh-pages:build": "./tools/build.gh-pages.sh",
+    "gh-pages:publish": "./tools/publish.gh-pages.sh",
+    "gh-pages": "npm run gh-pages:build && npm run gh-pages:publish"
   },
   "private": true,
   "dependencies": {
