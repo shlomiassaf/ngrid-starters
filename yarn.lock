@@ -2154,17 +2154,17 @@
     yargs "^11.0.0"
     yargs-parser "10.0.0"
 
-"@pebula/ngrid-material@^2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@pebula/ngrid-material/-/ngrid-material-2.2.1.tgz#1e0eaf4c46f622088f4e00cc35d1eadb838018a2"
-  integrity sha512-tMQQIEo41O8ljfvz5ZXOSU1W2Q6Q5GuTiGtcNAiWS6QX0aGPG8IvMCkJh7raP/UEd+0/GASQHJn0e3DBoW6lVg==
+"@pebula/ngrid-material@2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@pebula/ngrid-material/-/ngrid-material-2.3.0.tgz#38add104a193d1c2a28f9019d1d2b4960f91d4bd"
+  integrity sha512-+u1pE4YwApm/5PLjGoRSa+eo2ZlpifkSEFTVPY1gLp5Aq2jMOJgqS5z4MCjGIo553xMft2mmCqFMv/LTFunjoQ==
   dependencies:
     tslib "^2.0.0"
 
-"@pebula/ngrid@^2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@pebula/ngrid/-/ngrid-2.2.1.tgz#c6dfc20344c2a685d9065f725a03db035bfcc558"
-  integrity sha512-RsoHUkSJp0H1R+aLp1MZVF/bEkwMs8VL9lT1YP9nJINVGCrV8PW6MkEibGEqy+kWnv5qa4RK4NsUgirlGxRWDA==
+"@pebula/ngrid@2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@pebula/ngrid/-/ngrid-2.3.0.tgz#1c2325e674944abd14cff1ff87e3d2d7e7481f21"
+  integrity sha512-pV9E3N09EKhth+NOR+T/HQdbiKUrAcLoxhWiuuwGviwiu2AcBvH9tlVx5kGmEMbG+bZY7Z19ufujods3t79LUg==
   dependencies:
     tslib "^2.0.0"
 
