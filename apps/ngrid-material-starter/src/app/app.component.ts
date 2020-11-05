@@ -1,5 +1,6 @@
 import { Component, ViewChild, VERSION } from '@angular/core';
 import { PblNgridComponent, createDS, columnFactory } from '@pebula/ngrid';
+import { createInfiniteScrollDS } from '@pebula/ngrid/infinite-scroll';
 
 import * as cdkPackageJson from '@angular/cdk/package.json';
 import * as ngridPackageJson from '@pebula/ngrid/package.json';
@@ -50,7 +51,8 @@ const COLUMNS = columnFactory()
 })
 export class AppComponent {
 
-  dataSource = createDS<Seller>()
+  dataSource = createInfiniteScrollDS<Seller>()
+    .withCacheOptions('sequenceBlocks')
     .onTrigger( () => getSellers() )
     .create();
 
