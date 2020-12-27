@@ -27,9 +27,7 @@
               "apps/ngrid-material-starter/src/favicon.ico",
               "apps/ngrid-material-starter/src/assets"
             ],
-            "styles": [
-              "apps/ngrid-material-starter/src/styles/main.scss"
-            ],
+            "styles": ["apps/ngrid-material-starter/src/styles/main.scss"],
             "scripts": []
           },
           "configurations": {
@@ -90,9 +88,7 @@
             "polyfills": "apps/ngrid-material-starter/src/polyfills.ts",
             "tsConfig": "apps/ngrid-material-starter/tsconfig.spec.json",
             "karmaConfig": "apps/ngrid-material-starter/karma.conf.js",
-            "styles": [
-              "apps/ngrid-material-starter/src/styles/main.scss"
-            ],
+            "styles": ["apps/ngrid-material-starter/src/styles/main.scss"],
             "scripts": [],
             "assets": [
               "apps/ngrid-material-starter/src/favicon.ico",
@@ -107,9 +103,7 @@
               "apps/ngrid-material-starter/tsconfig.app.json",
               "apps/ngrid-material-starter/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -139,9 +133,7 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/ngrid-material-starter-e2e/tsconfig.e2e.json"
-            ],
+            "tsConfig": ["apps/ngrid-material-starter-e2e/tsconfig.e2e.json"],
             "exclude": [
               "**/node_modules/**",
               "!apps/ngrid-material-starter-e2e/**"
@@ -149,7 +141,147 @@
           }
         }
       }
+    },
+    "ngrid-bootstrap-starter": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/ngrid-bootstrap-starter",
+      "sourceRoot": "apps/ngrid-bootstrap-starter/src",
+      "prefix": "ngrid-material-starter",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/ngrid-bootstrap-starter",
+            "index": "apps/ngrid-bootstrap-starter/src/index.html",
+            "main": "apps/ngrid-bootstrap-starter/src/main.ts",
+            "polyfills": "apps/ngrid-bootstrap-starter/src/polyfills.ts",
+            "tsConfig": "apps/ngrid-bootstrap-starter/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/ngrid-bootstrap-starter/src/favicon.ico",
+              "apps/ngrid-bootstrap-starter/src/assets"
+            ],
+            "styles": ["apps/ngrid-bootstrap-starter/src/styles/main.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/ngrid-bootstrap-starter/src/environments/environment.ts",
+                  "with": "apps/ngrid-bootstrap-starter/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ngrid-bootstrap-starter:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ngrid-bootstrap-starter:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ngrid-bootstrap-starter:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/ngrid-bootstrap-starter/tsconfig.app.json",
+              "apps/ngrid-bootstrap-starter/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/ngrid-bootstrap-starter/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/ngrid-bootstrap-starter/jest.config.js",
+            "tsConfig": "apps/ngrid-bootstrap-starter/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "apps/ngrid-bootstrap-starter/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "ngrid-bootstrap-starter-e2e": {
+      "root": "apps/ngrid-bootstrap-starter-e2e",
+      "sourceRoot": "apps/ngrid-bootstrap-starter-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/ngrid-bootstrap-starter-e2e/cypress.json",
+            "tsConfig": "apps/ngrid-bootstrap-starter-e2e/tsconfig.e2e.json",
+            "devServerTarget": "ngrid-bootstrap-starter:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ngrid-bootstrap-starter:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/ngrid-bootstrap-starter-e2e/tsconfig.e2e.json"],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/ngrid-bootstrap-starter-e2e/**"
+            ]
+          }
+        }
+      }
     }
   },
-  "defaultProject": "ngrid-material-starter"
+  "defaultProject": "ngrid-material-starter",
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  }
 }

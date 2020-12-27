@@ -1,0 +1,10 @@
+$typography-config: mat-typography-config();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$ngrid-bs-starter-primary: mat-palette($mat-indigo);
+
+// Create the theme object (a Sass map containing all of the palettes).
+
+$ngrid-bs-starter-theme: pbl-light-theme($ngrid-bs-starter-primary);

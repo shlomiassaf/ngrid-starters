@@ -13,9 +13,14 @@
     },
     "ngrid-material-starter-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "ngrid-material-starter"
-      ]
+      "implicitDependencies": ["ngrid-material-starter"]
+    },
+    "ngrid-bootstrap-starter": {
+      "tags": []
+    },
+    "ngrid-bootstrap-starter-e2e": {
+      "tags": [],
+      "implicitDependencies": ["ngrid-bootstrap-starter"]
     }
   }
 }
