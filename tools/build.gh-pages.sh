@@ -1,2 +1,5 @@
-node_modules/.bin/ng build ngrid-material-starter --prod --base-href ngrid-material-starter
-cp dist/apps/ngrid-material-starter/index.html dist/apps/ngrid-material-starter/404.html
+node_modules/.bin/ng build ngrid-material-starter --prod --base-href ngrid-starters/material --deploy-url ngrid-starters/material
+cp dist/apps/ngrid-starters/material/index.html dist/apps/ngrid-starters/material/404.html
+
+node_modules/.bin/ng build ngrid-bootstrap-starter --prod --base-href ngrid-starters/bootstrap --deploy-url ngrid-starters/bootstrap
+cp dist/apps/ngrid-starters/bootstrap/index.html dist/apps/ngrid-starters/bootstrap/404.html

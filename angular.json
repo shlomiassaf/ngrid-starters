@@ -18,7 +18,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "aot": true,
-            "outputPath": "dist/apps/ngrid-material-starter",
+            "outputPath": "dist/apps/ngrid-starters/material",
             "index": "apps/ngrid-material-starter/src/index.html",
             "main": "apps/ngrid-material-starter/src/main.ts",
             "polyfills": "apps/ngrid-material-starter/src/polyfills.ts",
@@ -156,7 +156,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/apps/ngrid-bootstrap-starter",
+            "outputPath": "dist/apps/ngrid-starters/bootstrap",
             "index": "apps/ngrid-bootstrap-starter/src/index.html",
             "main": "apps/ngrid-bootstrap-starter/src/main.ts",
             "polyfills": "apps/ngrid-bootstrap-starter/src/polyfills.ts",
