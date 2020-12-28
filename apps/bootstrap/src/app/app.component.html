@@ -1,0 +1,37 @@
+<div class="container-fluid">
+
+  <!--The content below is only a placeholder and can be replaced.-->
+  <div style="text-align:center">
+    <h2>
+      @pebula/ngrid Bootstrap Starter - WORK IN PROGRESS!!!
+    </h2>
+  </div>
+  <h3>This project is used for demonstration!</h3>
+
+  <pbl-ngrid class="pbl-ngrid-cell-ellipsis pbl-ngrid-header-cell-ellipsis"
+             [minDataViewHeight]="400" vScrollFixed
+             rowReorder columnReorder blockUi
+             focusMode="cell" [dataSource]="dataSource" [columns]="columns"
+             (cellClick)="$event.context && $event.context.startEdit()"
+
+             bsCellTooltip>
+
+    <div *pblNgridCellDef="'rating'; value as v">
+      <ngb-rating [rate]="v" [max]="5" readonly="true"></ngb-rating>
+    </div>
+  <!-- <div *pblNgridCellDef="'sales'; row as user">
+      <mat-icon>check</mat-icon>
+    </div> -->
+
+  </pbl-ngrid>
+
+  <footer>
+    <div class="d-flex p-2 bd-highlight">
+      <div class="p-2 bd-highlight">Angular @ {{ versions.ng }}</div>
+      <div class="p-2 bd-highlight">CDK @ {{ versions.cdk }}</div>
+      <div class="p-2 bd-highlight">@ng-bootstrap @ {{ versions.ngBootstrap }}</div>
+      <div class="p-2 bd-highlight">NGrid @ {{ versions.ngrid }}</div>
+      <div class="p-2 bd-highlight">NGrid Bootstrap @ {{ versions.ngridBootstrap }}</div>
+    </div>
+  </footer>
+</div>

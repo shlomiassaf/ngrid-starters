@@ -1,0 +1,20 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "ngridMaterialStarter",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "ngrid-starters",
+      "kebab-case"
+    ]
+  },
+  "linterOptions": {
+    "exclude": ["!**/*"]
+  }
+}

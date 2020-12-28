@@ -1,5 +1,5 @@
 {
-  "name": "ngrid-material-starter",
+  "name": "ngrid-starters",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -51,8 +51,9 @@
     "@ng-bootstrap/ng-bootstrap": "^8.0.0",
     "@nrwl/angular": "9.1.2",
     "@nrwl/workspace": "^9.1.2",
-    "@pebula/ngrid": "^3.0.0-alpha.4",
-    "@pebula/ngrid-material": "^3.0.0-alpha.4",
+    "@pebula/ngrid": "^3.0.0-alpha.5",
+    "@pebula/ngrid-bootstrap": "^3.0.0-alpha.5",
+    "@pebula/ngrid-material": "^3.0.0-alpha.5",
     "bootstrap": "^4.5.0",
     "core-js": "^2.5.4",
     "resize-observer-polyfill": "^1.5.1",

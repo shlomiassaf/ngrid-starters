@@ -1,0 +1,32 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+
+// Custom Theming for NGrid Material
+@import '~@pebula/ngrid/theming';
+@import '~@pebula/ngrid-material/theming';
+
+@import './variables';
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core($typography-config);
+
+// Set the typography for the table
+// In this instance, its identical to the app's typography but we can provide a different setup.
+@include pbl-ngrid-typography($typography-config);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($ngrid-material-starter-theme);
+
+// Include theme styles for the grid (with default spacing)
+@include pbl-ngrid-material-theme($ngrid-material-starter-theme);
+
+// If you want to add a narrow style, comment out the previous line and:
+// $narrow-spacing: ( spacing: $pbl-spacing-theme-narrow );
+// @include pbl-ngrid-theme(map-merge($ngrid-material-starter-theme, $narrow-spacing));
+
+html, body { height: 100%; }

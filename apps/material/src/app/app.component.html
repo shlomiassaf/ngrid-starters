@@ -1,0 +1,37 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    @pebula/ngrid Material Starter
+  </h1>
+</div>
+<h3>This project is used for demonstration!</h3>
+
+<pbl-ngrid persistState
+           rowReorder
+           columnReorder
+           blockUi
+           matSort
+           vScrollFixed
+           cellTooltip
+           matCheckboxSelection="selection"
+           focusMode="cell"
+           [dataSource]="dataSource"
+           [columns]="columns"
+           (cellClick)="$event.context && $event.context.startEdit()"
+           style="height: 500px"
+           class="pbl-ngrid-cell-ellipsis pbl-ngrid-header-cell-ellipsis">
+
+  <div *pblNgridCellDef="'sales'; row as user">
+    <mat-icon>check</mat-icon>
+  </div>
+
+</pbl-ngrid>
+
+<footer>
+  <div style="display: flex;">
+    <div style="margin: 15px 20px">Angular @ {{ versions.ng }}</div>
+    <div style="margin: 15px 20px">CDK @ {{ versions.cdk }}</div>
+    <div style="margin: 15px 20px">NGrid @ {{ versions.ngrid }}</div>
+    <div style="margin: 15px 20px">NGrid Material @ {{ versions.ngridMaterial }}</div>
+  </div>
+</footer>

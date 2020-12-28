@@ -1,0 +1,14 @@
+{
+  "fileServerFolder": ".",
+  "fixturesFolder": "./src/fixtures",
+  "integrationFolder": "./src/integration",
+  "modifyObstructiveCode": false,
+  "pluginsFile": "./src/plugins/index",
+  "supportFile": "./src/support/index.ts",
+  "video": true,
+  "videosFolder": "../../dist/cypress/apps/material-e2e/videos",
+  "screenshotsFolder": "../../dist/cypress/apps/material-e2e/screenshots",
+  "chromeWebSecurity": false,
+  "viewportHeight": 1080,
+  "viewportWidth": 1920
+}

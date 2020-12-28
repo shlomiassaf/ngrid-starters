@@ -2457,17 +2457,24 @@
     yargs "^11.0.0"
     yargs-parser "10.0.0"
 
-"@pebula/ngrid-material@^3.0.0-alpha.4":
-  version "3.0.0-alpha.4"
-  resolved "https://registry.yarnpkg.com/@pebula/ngrid-material/-/ngrid-material-3.0.0-alpha.4.tgz#3d98de27ecb1c8e26f9783af4db209696d16f0c9"
-  integrity sha512-K9ZdCHksqJwwqnlsu9t7VxeGOuupVqKEyr0ZjTpe8vZ6aYX9jk0B3jDusSJvxYuqH6xG0qec6Ry9iuHsGdjbLA==
+"@pebula/ngrid-bootstrap@^3.0.0-alpha.5":
+  version "3.0.0-alpha.5"
+  resolved "https://registry.yarnpkg.com/@pebula/ngrid-bootstrap/-/ngrid-bootstrap-3.0.0-alpha.5.tgz#3d2e400267886d9a67a169fb4767d3439360ca0f"
+  integrity sha512-NtvhGyDIuMR1Pa4n87V6VDAEjY5BqW9wOjNxVsU5qkrqsd46AClNeLSVyBm41XJSugNNgIYv8tsvf03pqhMUkQ==
   dependencies:
     tslib "^2.0.0"
 
-"@pebula/ngrid@^3.0.0-alpha.4":
-  version "3.0.0-alpha.4"
-  resolved "https://registry.yarnpkg.com/@pebula/ngrid/-/ngrid-3.0.0-alpha.4.tgz#3a58b08515b73b4fb43798575280413a9cc4df4b"
-  integrity sha512-U//bWQUD28RfJubLiNMbCgbCjlL5tD584adQr7juzhN8rn/xBWCt+t7NUg8CSob2xBCQbS0X89JdH8fgIPJpUQ==
+"@pebula/ngrid-material@^3.0.0-alpha.5":
+  version "3.0.0-alpha.5"
+  resolved "https://registry.yarnpkg.com/@pebula/ngrid-material/-/ngrid-material-3.0.0-alpha.5.tgz#19d991f019b5ee8bd1a5e0917a2ce568b52131cf"
+  integrity sha512-Kvt6mz30a4WlVWZNnNPdnI46D6Cqn1VHIRNVpE5klcyrfIThPxaDraPjC9/+3G0SBlXe3Z8zOKdGX97FhS4wBw==
+  dependencies:
+    tslib "^2.0.0"
+
+"@pebula/ngrid@^3.0.0-alpha.5":
+  version "3.0.0-alpha.5"
+  resolved "https://registry.yarnpkg.com/@pebula/ngrid/-/ngrid-3.0.0-alpha.5.tgz#d7051f5ddada351b234651126fa7e5d1ee4fca80"
+  integrity sha512-IXSc70GiBjker/fz15LUGvk/jDZJJMHRZ0vQMHFwWlUUvJOf+uIVfms1Qb1SvRz1c5HmAO8rcDaqemNww4PTNA==
   dependencies:
     tslib "^2.0.0"
 

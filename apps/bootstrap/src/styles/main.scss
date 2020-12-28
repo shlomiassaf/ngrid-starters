@@ -1,0 +1,13 @@
+@import '~@angular/material/theming';
+@import '~@pebula/ngrid/theming';
+@import '~@pebula/ngrid-bootstrap/theming';
+@import './variables';
+
+@import "~bootstrap/scss/bootstrap";
+
+// Set the typography for the table
+// In this instance, its identical to the app's typography but we can provide a different setup.
+@include pbl-ngrid-typography($typography-config);
+
+// Include theme styles for the grid (with default spacing)
+@include pbl-ngrid-bootstrap-theme($ngrid-bs-starter-theme);

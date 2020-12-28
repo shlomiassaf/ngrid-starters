@@ -1,5 +1,5 @@
 {
-  "npmScope": "ngrid-material-starter",
+  "npmScope": "ngrid-starters",
   "implicitDependencies": {
     "angular.json": "*",
     "package.json": "*",
@@ -8,19 +8,22 @@
     "nx.json": "*"
   },
   "projects": {
-    "ngrid-material-starter": {
+    "material": {
       "tags": []
     },
-    "ngrid-material-starter-e2e": {
+    "material-e2e": {
       "tags": [],
-      "implicitDependencies": ["ngrid-material-starter"]
+      "implicitDependencies": ["material"]
     },
-    "ngrid-bootstrap-starter": {
+    "bootstrap": {
       "tags": []
     },
-    "ngrid-bootstrap-starter-e2e": {
+    "bootstrap-e2e": {
       "tags": [],
-      "implicitDependencies": ["ngrid-bootstrap-starter"]
+      "implicitDependencies": ["bootstrap"]
+    },
+    "datasource": {
+      "tags": []
     }
   }
 }
