@@ -134,10 +134,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": ["apps/material-e2e/tsconfig.e2e.json"],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/material-e2e/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/material-e2e/**/*"]
           }
         }
       }
@@ -223,19 +220,14 @@
               "apps/bootstrap/tsconfig.app.json",
               "apps/bootstrap/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/bootstrap/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/bootstrap/**/*"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "apps/bootstrap/jest.config.js",
-            "tsConfig": "apps/bootstrap/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "apps/bootstrap/src/test-setup.ts"
+            "passWithNoTests": true
           }
         }
       }
@@ -262,10 +254,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": ["apps/bootstrap-e2e/tsconfig.e2e.json"],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/bootstrap-e2e/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/bootstrap-e2e/**/*"]
           }
         }
       }
@@ -280,7 +269,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": ["libs/datasource/tsconfig.lib.json"],
-            "exclude": ["**/node_modules/**", "!libs/datasource/**"]
+            "exclude": ["**/node_modules/**", "!libs/datasource/**/*"]
           }
         }
       },

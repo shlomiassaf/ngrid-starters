@@ -3,9 +3,9 @@
   "implicitDependencies": {
     "angular.json": "*",
     "package.json": "*",
-    "tsconfig.json": "*",
     "tslint.json": "*",
-    "nx.json": "*"
+    "nx.json": "*",
+    "tsconfig.base.json": "*"
   },
   "projects": {
     "material": {
@@ -13,17 +13,37 @@
     },
     "material-e2e": {
       "tags": [],
-      "implicitDependencies": ["material"]
+      "implicitDependencies": [
+        "material"
+      ]
     },
     "bootstrap": {
       "tags": []
     },
     "bootstrap-e2e": {
       "tags": [],
-      "implicitDependencies": ["bootstrap"]
+      "implicitDependencies": [
+        "bootstrap"
+      ]
     },
     "datasource": {
       "tags": []
     }
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ]
+      }
+    }
+  },
+  "affected": {
+    "defaultBase": "master"
   }
 }
