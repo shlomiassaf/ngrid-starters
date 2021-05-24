@@ -1,0 +1,2 @@
+--secret-file .act-secrets
+-P ubuntu-latest=catthehacker/ubuntu:act-latest

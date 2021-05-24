@@ -12,6 +12,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
+      - name: Install Yarn On ACT
+        if: ${{ !env.ACT }}
+        run: npm install -g yarn
       - name: Install dependencies
         run: yarn install --ignore-platform
       - run: ./node_modules/.bin/nx build material --configuration=production --deploy-url="/ngrid-starters/material/"

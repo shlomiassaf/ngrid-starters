@@ -5,6 +5,9 @@
 /tmp
 /out-tsc
 
+# secrets file for GitHub actions sim (act)
+.act-secrets
+
 # dependencies
 /node_modules
 
