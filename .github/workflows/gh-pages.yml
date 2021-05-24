@@ -4,8 +4,6 @@ on:
   workflow_dispatch:
   push:
     branches: [master]
-env:
-  DEPENDENCIES_CACHE: cache-node-modules
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,10 +14,11 @@ jobs:
           node-version: 14
       - name: Install dependencies
         run: yarn install --ignore-platform
-      - run: mkdir ./.cache
-      - run: ./node_modules/.bin/nx build material --prod --deploy-url /ngrid-starters/material/
+      - run: ./node_modules/.bin/nx build material --prod --deploy-url="/ngrid-starters/material/"
+      - run: ./node_modules/.bin/nx build material --prod --deploy-url="/ngrid-starters/material/" --skip-nx-cache
       - run: cp dist/apps/ngrid-starters/material/index.html dist/apps/ngrid-starters/material/404.html
-      - run: ./node_modules/.bin/nx build bootstrap --prod --deploy-url /ngrid-starters/bootstrap/
+      - run: ./node_modules/.bin/nx build bootstrap --prod --deploy-url="/ngrid-starters/bootstrap/"
+      - run: ./node_modules/.bin/nx build bootstrap --prod --deploy-url="/ngrid-starters/bootstrap/" --skip-nx-cache
       - run: cp dist/apps/ngrid-starters/bootstrap/index.html dist/apps/ngrid-starters/bootstrap/404.html
 
       - uses: JamesIves/github-pages-deploy-action@3.7.1
