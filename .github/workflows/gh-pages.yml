@@ -14,9 +14,9 @@ jobs:
           node-version: 14
       - name: Install dependencies
         run: yarn install --ignore-platform
-      - run: ./node_modules/.bin/nx build material --prod --deploy-url="/ngrid-starters/material/"
+      - run: ./node_modules/.bin/nx build material --configuration=production --deploy-url="/ngrid-starters/material/"
       - run: cp dist/apps/ngrid-starters/material/index.html dist/apps/ngrid-starters/material/404.html
-      - run: ./node_modules/.bin/nx build bootstrap --prod --deploy-url="/ngrid-starters/bootstrap/"
+      - run: ./node_modules/.bin/nx build bootstrap --configuration=production --deploy-url="/ngrid-starters/bootstrap/"
       - run: cp dist/apps/ngrid-starters/bootstrap/index.html dist/apps/ngrid-starters/bootstrap/404.html
 
       - uses: JamesIves/github-pages-deploy-action@3.7.1
