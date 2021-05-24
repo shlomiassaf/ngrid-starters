@@ -66,10 +66,7 @@
                 }
               ]
             }
-          },
-          "outputs": [
-            "{options.outputPath}"
-          ]
+          }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
