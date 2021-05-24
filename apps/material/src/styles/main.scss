@@ -1,32 +1,28 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@import '~@angular/material/theming';
+@use '~@angular/material' as mat;
 
 // Custom Theming for NGrid Material
-@import '~@pebula/ngrid/theming';
-@import '~@pebula/ngrid-material/theming';
+@use '~@pebula/ngrid' as ngrid;
+@use '~@pebula/ngrid-material' as ngrid-material;
 
-@import './variables';
-
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-@include mat-core($typography-config);
+$typography-config: mat.define-typography-config();
+$ngrid-material-starter-primary: mat.define-palette(mat.$indigo-palette);
+$ngrid-material-starter-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$ngrid-material-starter-warn: mat.define-palette(mat.$red-palette);
+$ngrid-material-starter-theme: mat.define-light-theme($ngrid-material-starter-primary, $ngrid-material-starter-accent, $ngrid-material-starter-warn);
+$ngrid-material-starter-theme: ngrid.define-light-theme($ngrid-material-starter-theme);
 
 // Set the typography for the table
 // In this instance, its identical to the app's typography but we can provide a different setup.
-@include pbl-ngrid-typography($typography-config);
+@include ngrid.ngrid-typography($typography-config);
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include angular-material-theme($ngrid-material-starter-theme);
+@include mat.core($typography-config);
 
-// Include theme styles for the grid (with default spacing)
-@include pbl-ngrid-material-theme($ngrid-material-starter-theme);
+// rendering the material styles
+@include mat.all-component-themes($ngrid-material-starter-theme);
 
-// If you want to add a narrow style, comment out the previous line and:
-// $narrow-spacing: ( spacing: $pbl-spacing-theme-narrow );
-// @include pbl-ngrid-theme(map-merge($ngrid-material-starter-theme, $narrow-spacing));
+// rendering the ngrid styles
+@include ngrid-material.all-ngrid-material-theme($ngrid-material-starter-theme);
 
 html, body { height: 100%; }

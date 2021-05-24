@@ -1,13 +1,21 @@
-@import '~@angular/material/theming';
-@import '~@pebula/ngrid/theming';
-@import '~@pebula/ngrid-bootstrap/theming';
-@import './variables';
+@use '~@pebula/ngrid' as ngrid;
+@use '~@pebula/ngrid-bootstrap' as ngrid-bs;
 
 @import "~bootstrap/scss/bootstrap";
 
+$typography-config: ngrid.define-typography-config();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$ngrid-bs-starter-primary: ngrid.define-palette(ngrid.$blue-palette);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$ngrid-bs-starter-theme: ngrid.define-light-theme($ngrid-bs-starter-primary);
+
 // Set the typography for the table
 // In this instance, its identical to the app's typography but we can provide a different setup.
-@include pbl-ngrid-typography($typography-config);
+@include ngrid.ngrid-typography($typography-config);
 
 // Include theme styles for the grid (with default spacing)
-@include pbl-ngrid-bootstrap-theme($ngrid-bs-starter-theme);
+@include ngrid-bs.ngrid-bootstrap-theme($ngrid-bs-starter-theme);

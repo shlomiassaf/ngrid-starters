@@ -17,7 +17,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": true,
             "outputPath": "dist/apps/ngrid-starters/material",
             "index": "apps/material/src/index.html",
             "main": "apps/material/src/main.ts",
@@ -30,7 +29,13 @@
             "styles": [
               "apps/material/src/styles/main.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "viewEngine": {
@@ -175,7 +180,6 @@
             "main": "apps/bootstrap/src/main.ts",
             "polyfills": "apps/bootstrap/src/polyfills.ts",
             "tsConfig": "apps/bootstrap/tsconfig.app.json",
-            "aot": true,
             "assets": [
               "apps/bootstrap/src/favicon.ico",
               "apps/bootstrap/src/assets"
@@ -183,7 +187,13 @@
             "styles": [
               "apps/bootstrap/src/styles/main.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {

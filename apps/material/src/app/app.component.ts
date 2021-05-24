@@ -1,9 +1,8 @@
-import { Component, ViewChild, VERSION } from '@angular/core';
-import { PblNgridComponent, createDS, columnFactory } from '@pebula/ngrid';
-
-import * as cdkPackageJson from '@angular/cdk/package.json';
-import * as ngridPackageJson from '@pebula/ngrid/package.json';
-import * as ngridMaterialPackageJson from '@pebula/ngrid-material/package.json';
+import { Component, VERSION } from '@angular/core';
+import { VERSION as CDK_VERSION } from '@angular/cdk';
+import { createDS, columnFactory } from '@pebula/ngrid';
+import ngridPackageJson from '@pebula/ngrid/package.json';
+import ngridMaterialPackageJson from '@pebula/ngrid-material/package.json';
 
 import { Seller, getSellers } from '@ngrid-starters/datasource';
 
@@ -58,7 +57,7 @@ export class AppComponent {
 
   versions = {
     ng: VERSION.full,
-    cdk: cdkPackageJson.version,
+    cdk: CDK_VERSION.full,
     ngrid: ngridPackageJson.version,
     ngridMaterial: ngridMaterialPackageJson.version,
   }
