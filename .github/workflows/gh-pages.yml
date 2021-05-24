@@ -8,12 +8,12 @@ env:
   DEPENDENCIES_CACHE: cache-node-modules
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-10.15
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 14
       - name: Cache node modules
         uses: actions/cache@v2
         with:
@@ -21,10 +21,10 @@ jobs:
           key: ${{ env.DEPENDENCIES_CACHE }}-${{ hashFiles('yarn.lock') }}
       - name: Install dependencies
         run: yarn install --ignore-platform
-      - run: mkdir /home/runner/work/ngrid-starters/ngrid-starters/.cache
-      - run: node --max-old-space-size=8192 ./node_modules/.bin/ng build material --prod --deploy-url /ngrid-starters/material/
+      - run: mkdir ./.cache
+      - run: ./node_modules/.bin/nx build material --prod --deploy-url /ngrid-starters/material/
       - run: cp dist/apps/ngrid-starters/material/index.html dist/apps/ngrid-starters/material/404.html
-      - run: node --max-old-space-size=8192 ./node_modules/.bin/ng build bootstrap --prod --deploy-url /ngrid-starters/bootstrap/
+      - run: ./node_modules/.bin/nx build bootstrap --prod --deploy-url /ngrid-starters/bootstrap/
       - run: cp dist/apps/ngrid-starters/bootstrap/index.html dist/apps/ngrid-starters/bootstrap/404.html
 
       - uses: JamesIves/github-pages-deploy-action@3.7.1

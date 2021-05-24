@@ -30,7 +30,7 @@
     "gh-pages:build": "./tools/build.gh-pages.sh",
     "gh-pages:publish": "./tools/publish.gh-pages.sh",
     "gh-pages": "npm run gh-pages:build && npm run gh-pages:publish",
-    "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
+    "postinstall": "node ./decorate-angular-cli.js",
     "workspace-generator": "nx workspace-generator"
   },
   "private": true,
