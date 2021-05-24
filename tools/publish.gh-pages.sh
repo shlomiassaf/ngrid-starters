@@ -1,4 +1,4 @@
-dist/apps/ngrid-starters
+cd dist/apps/ngrid-starters
 
 git init
 git config user.email "shlomiasaf@gmail.com"
