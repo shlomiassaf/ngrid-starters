@@ -8,17 +8,12 @@ env:
   DEPENDENCIES_CACHE: cache-node-modules
 jobs:
   build:
-    runs-on: macos-10.15
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: 14
-      - name: Cache node modules
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: ${{ env.DEPENDENCIES_CACHE }}-${{ hashFiles('yarn.lock') }}
       - name: Install dependencies
         run: yarn install --ignore-platform
       - run: mkdir ./.cache
