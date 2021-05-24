@@ -4,6 +4,8 @@ on:
   workflow_dispatch:
   push:
     branches: [master]
+env:
+  DEPENDENCIES_CACHE: cache-node-modules
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -11,8 +13,14 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
-      - run: npm install
+          node-version: 14
+      - name: Cache node modules
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ${{ env.DEPENDENCIES_CACHE }}-${{ hashFiles('yarn.lock') }}
+      - name: Install dependencies
+        run: yarn install --ignore-platform
       - run: mkdir /home/runner/work/ngrid-starters/ngrid-starters/.cache
       - run: node_modules/.bin/ng build material --prod --deploy-url ngrid-starters/material/
       - run: cp ./dist/apps/ngrid-starters/material/index.html ./dist/apps/ngrid-starters/material/404.html
