@@ -2759,24 +2759,24 @@
     yargs "15.4.1"
     yargs-parser "20.0.0"
 
-"@pebula/ngrid-bootstrap@4.0.0-alpha.1":
-  version "4.0.0-alpha.1"
-  resolved "https://registry.yarnpkg.com/@pebula/ngrid-bootstrap/-/ngrid-bootstrap-4.0.0-alpha.1.tgz#de1f1a8190a8d63af32fe240a7431618cd3b9d68"
-  integrity sha512-59UTvXE09Z6slAlV68LmquZep1NRpaZOIFUEsCdwRPURcs9Og+Jkftxkdefup44Ny47+dntScPG1kkrSNBfy+Q==
+"@pebula/ngrid-bootstrap@4.0.0-alpha.2":
+  version "4.0.0-alpha.2"
+  resolved "https://registry.yarnpkg.com/@pebula/ngrid-bootstrap/-/ngrid-bootstrap-4.0.0-alpha.2.tgz#e7d49b809d37bed020021bd2c4e71b491bb8ed99"
+  integrity sha512-cnYmjQ60F709xfuu9MNcOlgwM6Ok9TyFPG138U3RzFyYiQYotk0PqRUtPbbCGnsRjH34+MMpJ1eMv0dQ2akuXQ==
   dependencies:
     tslib "^2.0.0"
 
-"@pebula/ngrid-material@4.0.0-alpha.1":
-  version "4.0.0-alpha.1"
-  resolved "https://registry.yarnpkg.com/@pebula/ngrid-material/-/ngrid-material-4.0.0-alpha.1.tgz#68baa1f690d7859c8f1efea89c6314a6817feb55"
-  integrity sha512-flPwjv631uo0xzS0+msxRiPlEwmOcrLuwB0z+eOvY8cuQiRvdcX3/77xNo5r4y+r0N418yJjxfDcrx3WKB8k1A==
+"@pebula/ngrid-material@4.0.0-alpha.2":
+  version "4.0.0-alpha.2"
+  resolved "https://registry.yarnpkg.com/@pebula/ngrid-material/-/ngrid-material-4.0.0-alpha.2.tgz#c8620aecb4afde88fec9b8d8857c559d34c5cc11"
+  integrity sha512-wpRKk10xNiNR7ms+2ZeyKJYYLb0mqzUcKxXqF/zHjIs132Gjzn9wEd9recRM4GvZPLJ0TXtkwY4l81YXolOeXQ==
   dependencies:
     tslib "^2.1.0"
 
-"@pebula/ngrid@4.0.0-alpha.1":
-  version "4.0.0-alpha.1"
-  resolved "https://registry.yarnpkg.com/@pebula/ngrid/-/ngrid-4.0.0-alpha.1.tgz#61bbcdbb3c26822a0d13bf07fe39720a55800573"
-  integrity sha512-guRX8WHjhBfOoET+U54YrRgXN1g4JBkQD8mbd9WtyXySxpaOlDtZo5ihIsmGNGYEo2z5GE7kqhIp6up6rkc7hA==
+"@pebula/ngrid@4.0.0-alpha.2":
+  version "4.0.0-alpha.2"
+  resolved "https://registry.yarnpkg.com/@pebula/ngrid/-/ngrid-4.0.0-alpha.2.tgz#2948844680b2f28ae30c32821cdd58729c248d73"
+  integrity sha512-2kMJ2uSov1TQ4HmuhzYdcXbTZ29lsnLDCuiE/DdsyX9vUzqkQgkPwXVWImso9g0os19pY4E5nF9TcwZRVEcCjw==
   dependencies:
     tslib "^2.1.0"
 
