@@ -25,9 +25,7 @@
               "apps/bootstrap/src/favicon.ico",
               "apps/bootstrap/src/assets"
             ],
-            "styles": [
-              "apps/bootstrap/src/styles/main.scss"
-            ],
+            "styles": ["apps/bootstrap/src/styles/main.scss"],
             "scripts": [],
             "vendorChunk": true,
             "extractLicenses": false,
@@ -65,9 +63,7 @@
               ]
             }
           },
-          "outputs": [
-            "{options.outputPath}"
-          ]
+          "outputs": ["{options.outputPath}"]
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -89,12 +85,10 @@
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "apps/bootstrap/jest.config.js",
+            "jestConfig": "apps/bootstrap/jest.config.ts",
             "passWithNoTests": true
           },
-          "outputs": [
-            "coverage/apps/bootstrap"
-          ]
+          "outputs": ["coverage/apps/bootstrap"]
         }
       },
       "tags": []
@@ -119,9 +113,7 @@
         }
       },
       "tags": [],
-      "implicitDependencies": [
-        "bootstrap"
-      ]
+      "implicitDependencies": ["bootstrap"]
     },
     "datasource": {
       "projectType": "library",
@@ -159,9 +151,7 @@
               "apps/material/src/favicon.ico",
               "apps/material/src/assets"
             ],
-            "styles": [
-              "apps/material/src/styles/main.scss"
-            ],
+            "styles": ["apps/material/src/styles/main.scss"],
             "scripts": [],
             "vendorChunk": true,
             "extractLicenses": false,
@@ -222,18 +212,14 @@
             "polyfills": "apps/material/src/polyfills.ts",
             "tsConfig": "apps/material/tsconfig.spec.json",
             "karmaConfig": "apps/material/karma.conf.js",
-            "styles": [
-              "apps/material/src/styles/main.scss"
-            ],
+            "styles": ["apps/material/src/styles/main.scss"],
             "scripts": [],
             "assets": [
               "apps/material/src/favicon.ico",
               "apps/material/src/assets"
             ]
           },
-          "outputs": [
-            "coverage/apps/material"
-          ]
+          "outputs": ["coverage/apps/material"]
         }
       },
       "tags": []
@@ -259,9 +245,7 @@
         }
       },
       "tags": [],
-      "implicitDependencies": [
-        "material"
-      ]
+      "implicitDependencies": ["material"]
     }
   }
 }
