@@ -3,6 +3,153 @@
   "version": 1,
   "newProjectRoot": "",
   "projects": {
+    "bootstrap": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/bootstrap",
+      "sourceRoot": "apps/bootstrap/src",
+      "prefix": "bootstrap",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/ngrid-starters/bootstrap",
+            "index": "apps/bootstrap/src/index.html",
+            "main": "apps/bootstrap/src/main.ts",
+            "polyfills": "apps/bootstrap/src/polyfills.ts",
+            "tsConfig": "apps/bootstrap/tsconfig.app.json",
+            "assets": [
+              "apps/bootstrap/src/favicon.ico",
+              "apps/bootstrap/src/assets"
+            ],
+            "styles": ["apps/bootstrap/src/styles/main.scss"],
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/bootstrap/src/environments/environment.ts",
+                  "with": "apps/bootstrap/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          },
+          "outputs": ["{options.outputPath}"]
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "bootstrap:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "bootstrap:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "bootstrap:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/bootstrap/tsconfig.app.json",
+              "apps/bootstrap/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/bootstrap/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/bootstrap/jest.config.js",
+            "passWithNoTests": true
+          },
+          "outputs": ["coverage/apps/bootstrap"]
+        }
+      }
+    },
+    "bootstrap-e2e": {
+      "root": "apps/bootstrap-e2e",
+      "sourceRoot": "apps/bootstrap-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/bootstrap-e2e/cypress.json",
+            "tsConfig": "apps/bootstrap-e2e/tsconfig.e2e.json",
+            "devServerTarget": "bootstrap:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "bootstrap:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/bootstrap-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/bootstrap-e2e/**/*"]
+          }
+        }
+      }
+    },
+    "datasource": {
+      "projectType": "library",
+      "root": "libs/datasource",
+      "sourceRoot": "libs/datasource/src",
+      "prefix": "ngrid-starters",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["libs/datasource/tsconfig.lib.json"],
+            "exclude": ["**/node_modules/**", "!libs/datasource/**/*"]
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
     "material": {
       "root": "apps/material",
       "sourceRoot": "apps/material/src",
@@ -26,9 +173,7 @@
               "apps/material/src/favicon.ico",
               "apps/material/src/assets"
             ],
-            "styles": [
-              "apps/material/src/styles/main.scss"
-            ],
+            "styles": ["apps/material/src/styles/main.scss"],
             "scripts": [],
             "vendorChunk": true,
             "extractLicenses": false,
@@ -95,18 +240,14 @@
             "polyfills": "apps/material/src/polyfills.ts",
             "tsConfig": "apps/material/tsconfig.spec.json",
             "karmaConfig": "apps/material/karma.conf.js",
-            "styles": [
-              "apps/material/src/styles/main.scss"
-            ],
+            "styles": ["apps/material/src/styles/main.scss"],
             "scripts": [],
             "assets": [
               "apps/material/src/favicon.ico",
               "apps/material/src/assets"
             ]
           },
-          "outputs": [
-            "coverage/apps/material"
-          ]
+          "outputs": ["coverage/apps/material"]
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
@@ -115,9 +256,7 @@
               "apps/material/tsconfig.app.json",
               "apps/material/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -147,195 +286,11 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/material-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/material-e2e/**/*"
-            ]
+            "tsConfig": ["apps/material-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/material-e2e/**/*"]
           }
         }
       }
-    },
-    "bootstrap": {
-      "projectType": "application",
-      "schematics": {
-        "@nrwl/angular:component": {
-          "style": "scss"
-        }
-      },
-      "root": "apps/bootstrap",
-      "sourceRoot": "apps/bootstrap/src",
-      "prefix": "bootstrap",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist/apps/ngrid-starters/bootstrap",
-            "index": "apps/bootstrap/src/index.html",
-            "main": "apps/bootstrap/src/main.ts",
-            "polyfills": "apps/bootstrap/src/polyfills.ts",
-            "tsConfig": "apps/bootstrap/tsconfig.app.json",
-            "assets": [
-              "apps/bootstrap/src/favicon.ico",
-              "apps/bootstrap/src/assets"
-            ],
-            "styles": [
-              "apps/bootstrap/src/styles/main.scss"
-            ],
-            "scripts": [],
-            "vendorChunk": true,
-            "extractLicenses": false,
-            "buildOptimizer": false,
-            "sourceMap": true,
-            "optimization": false,
-            "namedChunks": true
-          },
-          "configurations": {
-            "production": {
-              "fileReplacements": [
-                {
-                  "replace": "apps/bootstrap/src/environments/environment.ts",
-                  "with": "apps/bootstrap/src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
-                }
-              ]
-            }
-          },
-          "outputs": [
-            "{options.outputPath}"
-          ]
-        },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "bootstrap:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "bootstrap:build:production"
-            }
-          }
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "bootstrap:build"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "apps/bootstrap/tsconfig.app.json",
-              "apps/bootstrap/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/bootstrap/**/*"
-            ]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "apps/bootstrap/jest.config.js",
-            "passWithNoTests": true
-          },
-          "outputs": [
-            "coverage/apps/bootstrap"
-          ]
-        }
-      }
-    },
-    "bootstrap-e2e": {
-      "root": "apps/bootstrap-e2e",
-      "sourceRoot": "apps/bootstrap-e2e/src",
-      "projectType": "application",
-      "architect": {
-        "e2e": {
-          "builder": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/bootstrap-e2e/cypress.json",
-            "tsConfig": "apps/bootstrap-e2e/tsconfig.e2e.json",
-            "devServerTarget": "bootstrap:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "bootstrap:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "apps/bootstrap-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/bootstrap-e2e/**/*"
-            ]
-          }
-        }
-      }
-    },
-    "datasource": {
-      "projectType": "library",
-      "root": "libs/datasource",
-      "sourceRoot": "libs/datasource/src",
-      "prefix": "ngrid-starters",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/datasource/tsconfig.lib.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/datasource/**/*"
-            ]
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/angular:component": {
-          "styleext": "scss"
-        }
-      }
-    }
-  },
-  "defaultProject": "material",
-  "cli": {
-    "defaultCollection": "@nrwl/angular"
-  },
-  "schematics": {
-    "@nrwl/angular:application": {
-      "unitTestRunner": "jest",
-      "e2eTestRunner": "cypress"
-    },
-    "@nrwl/angular:library": {
-      "unitTestRunner": "jest"
     }
   }
 }
