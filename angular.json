@@ -25,7 +25,9 @@
               "apps/bootstrap/src/favicon.ico",
               "apps/bootstrap/src/assets"
             ],
-            "styles": ["apps/bootstrap/src/styles/main.scss"],
+            "styles": [
+              "apps/bootstrap/src/styles/main.scss"
+            ],
             "scripts": [],
             "vendorChunk": true,
             "extractLicenses": false,
@@ -63,7 +65,9 @@
               ]
             }
           },
-          "outputs": ["{options.outputPath}"]
+          "outputs": [
+            "{options.outputPath}"
+          ]
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -89,7 +93,10 @@
               "apps/bootstrap/tsconfig.app.json",
               "apps/bootstrap/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/bootstrap/**/*"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/bootstrap/**/*"
+            ]
           }
         },
         "test": {
@@ -98,7 +105,9 @@
             "jestConfig": "apps/bootstrap/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/apps/bootstrap"]
+          "outputs": [
+            "coverage/apps/bootstrap"
+          ]
         }
       },
       "tags": []
@@ -124,13 +133,20 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/bootstrap-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/bootstrap-e2e/**/*"]
+            "tsConfig": [
+              "apps/bootstrap-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/bootstrap-e2e/**/*"
+            ]
           }
         }
       },
       "tags": [],
-      "implicitDependencies": ["bootstrap"]
+      "implicitDependencies": [
+        "bootstrap"
+      ]
     },
     "datasource": {
       "projectType": "library",
@@ -141,8 +157,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["libs/datasource/tsconfig.lib.json"],
-            "exclude": ["**/node_modules/**", "!libs/datasource/**/*"]
+            "tsConfig": [
+              "libs/datasource/tsconfig.lib.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/datasource/**/*"
+            ]
           }
         }
       },
@@ -176,7 +197,9 @@
               "apps/material/src/favicon.ico",
               "apps/material/src/assets"
             ],
-            "styles": ["apps/material/src/styles/main.scss"],
+            "styles": [
+              "apps/material/src/styles/main.scss"
+            ],
             "scripts": [],
             "vendorChunk": true,
             "extractLicenses": false,
@@ -237,14 +260,18 @@
             "polyfills": "apps/material/src/polyfills.ts",
             "tsConfig": "apps/material/tsconfig.spec.json",
             "karmaConfig": "apps/material/karma.conf.js",
-            "styles": ["apps/material/src/styles/main.scss"],
+            "styles": [
+              "apps/material/src/styles/main.scss"
+            ],
             "scripts": [],
             "assets": [
               "apps/material/src/favicon.ico",
               "apps/material/src/assets"
             ]
           },
-          "outputs": ["coverage/apps/material"]
+          "outputs": [
+            "coverage/apps/material"
+          ]
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
@@ -253,7 +280,9 @@
               "apps/material/tsconfig.app.json",
               "apps/material/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       },
@@ -281,13 +310,20 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/material-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/material-e2e/**/*"]
+            "tsConfig": [
+              "apps/material-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/material-e2e/**/*"
+            ]
           }
         }
       },
       "tags": [],
-      "implicitDependencies": ["material"]
+      "implicitDependencies": [
+        "material"
+      ]
     }
   }
 }
