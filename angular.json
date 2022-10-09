@@ -86,19 +86,6 @@
             "browserTarget": "bootstrap:build"
           }
         },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "apps/bootstrap/tsconfig.app.json",
-              "apps/bootstrap/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/bootstrap/**/*"
-            ]
-          }
-        },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
@@ -129,18 +116,6 @@
               "devServerTarget": "bootstrap:serve:production"
             }
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "apps/bootstrap-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/bootstrap-e2e/**/*"
-            ]
-          }
         }
       },
       "tags": [],
@@ -153,20 +128,7 @@
       "root": "libs/datasource",
       "sourceRoot": "libs/datasource/src",
       "prefix": "ngrid-starters",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/datasource/tsconfig.lib.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/datasource/**/*"
-            ]
-          }
-        }
-      },
+      "architect": {},
       "schematics": {
         "@nrwl/angular:component": {
           "styleext": "scss"
@@ -272,18 +234,6 @@
           "outputs": [
             "coverage/apps/material"
           ]
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "apps/material/tsconfig.app.json",
-              "apps/material/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       },
       "tags": []
@@ -305,18 +255,6 @@
             "production": {
               "devServerTarget": "material:serve:production"
             }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "apps/material-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/material-e2e/**/*"
-            ]
           }
         }
       },
