@@ -9,7 +9,7 @@
 // ***********************************************
 // eslint-disable-next-line @typescript-eslint/no-namespace
 
-import { addMatchImageSnapshotCommand } from 'cypress-image-snapshot/command';
+import { addMatchImageSnapshotCommand } from '@simonsmith/cypress-image-snapshot/command';
 
 declare global {
   namespace Cypress {

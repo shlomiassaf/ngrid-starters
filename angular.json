@@ -101,9 +101,10 @@
         "e2e": {
           "builder": "@nrwl/cypress:cypress",
           "options": {
-            "cypressConfig": "apps/bootstrap-e2e/cypress.json",
+            "cypressConfig": "apps/bootstrap-e2e/cypress.config.ts",
             "tsConfig": "apps/bootstrap-e2e/tsconfig.e2e.json",
-            "devServerTarget": "bootstrap:serve"
+            "devServerTarget": "bootstrap:serve",
+            "testingType": "e2e"
           },
           "configurations": {
             "production": {
@@ -232,10 +233,11 @@
         "e2e": {
           "builder": "@nrwl/cypress:cypress",
           "options": {
-            "cypressConfig": "apps/material-e2e/cypress.json",
+            "cypressConfig": "apps/material-e2e/cypress.config.ts",
             "headless": true,
             "tsConfig": "apps/material-e2e/tsconfig.e2e.json",
-            "devServerTarget": "material:serve"
+            "devServerTarget": "material:serve",
+            "testingType": "e2e"
           },
           "configurations": {
             "production": {

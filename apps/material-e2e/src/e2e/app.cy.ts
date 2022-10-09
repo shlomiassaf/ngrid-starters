@@ -1,6 +1,5 @@
 describe('material', () => {
-
-  beforeEach(() => cy.visit('/') );
+  beforeEach(() => cy.visit('/'));
 
   it('should load grid with data', () => {
     cy.wait(500);

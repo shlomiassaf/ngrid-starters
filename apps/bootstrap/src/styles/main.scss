@@ -1,7 +1,7 @@
-@use '~@pebula/ngrid' as ngrid;
-@use '~@pebula/ngrid-bootstrap' as ngrid-bs;
+@use '@pebula/ngrid' as ngrid;
+@use '@pebula/ngrid-bootstrap' as ngrid-bs;
 
-@import "~bootstrap/scss/bootstrap";
+@import "bootstrap/scss/bootstrap";
 
 $typography-config: ngrid.define-typography-config();
 
