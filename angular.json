@@ -101,7 +101,8 @@
           },
           "outputs": ["coverage/apps/bootstrap"]
         }
-      }
+      },
+      "tags": []
     },
     "bootstrap-e2e": {
       "root": "apps/bootstrap-e2e",
@@ -128,7 +129,9 @@
             "exclude": ["**/node_modules/**", "!apps/bootstrap-e2e/**/*"]
           }
         }
-      }
+      },
+      "tags": [],
+      "implicitDependencies": ["bootstrap"]
     },
     "datasource": {
       "projectType": "library",
@@ -148,7 +151,8 @@
         "@nrwl/angular:component": {
           "styleext": "scss"
         }
-      }
+      },
+      "tags": []
     },
     "material": {
       "root": "apps/material",
@@ -259,7 +263,8 @@
             "exclude": ["**/node_modules/**"]
           }
         }
-      }
+      },
+      "tags": []
     },
     "material-e2e": {
       "root": "apps/material-e2e",
@@ -290,7 +295,9 @@
             "exclude": ["**/node_modules/**", "!apps/material-e2e/**/*"]
           }
         }
-      }
+      },
+      "tags": [],
+      "implicitDependencies": ["material"]
     }
   }
 }
