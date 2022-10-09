@@ -56,11 +56,11 @@
     "@pebula/ngrid-material": "4.0.0-alpha.3",
     "bootstrap": "^4.5.0",
     "core-js": "^2.5.4",
+    "nx": "13.10.6",
     "resize-observer-polyfill": "^1.5.1",
     "rxjs": "6.6.3",
     "tslib": "^2.2.0",
-    "zone.js": "0.11.8",
-    "nx": "13.10.6"
+    "zone.js": "0.11.8"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "13.3.9",
@@ -83,6 +83,7 @@
     "jest-preset-angular": "11.1.1",
     "karma": "6.3.20",
     "karma-chrome-launcher": "3.1.0",
+    "karma-coverage": "~2.2.0",
     "karma-coverage-istanbul-reporter": "3.0.3",
     "karma-jasmine": "4.0.1",
     "karma-jasmine-html-reporter": "1.7.0",
