@@ -187,9 +187,6 @@
             "namedChunks": true
           },
           "configurations": {
-            "viewEngine": {
-              "tsConfig": "apps/material/tsconfig.app.view-engine.json"
-            },
             "production": {
               "fileReplacements": [
                 {
@@ -223,9 +220,6 @@
             "browserTarget": "material:build"
           },
           "configurations": {
-            "viewEngine": {
-              "browserTarget": "material:build:viewEngine"
-            },
             "production": {
               "browserTarget": "material:build:production"
             }
@@ -280,9 +274,6 @@
             "devServerTarget": "material:serve"
           },
           "configurations": {
-            "viewEngine": {
-              "devServerTarget": "material:serve:viewEngine"
-            },
             "production": {
               "devServerTarget": "material:serve:production"
             }
