@@ -27,9 +27,6 @@
       }
     ]
   },
-  "cli": {
-    "defaultCollection": "@nrwl/angular"
-  },
   "defaultProject": "material",
   "generators": {
     "@nrwl/angular:application": {
