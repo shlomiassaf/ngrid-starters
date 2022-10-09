@@ -1,5 +1,6 @@
 import { TestBed, waitForAsync } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import '@pebula/ngrid/drag';
 
 describe('AppComponent', () => {
   beforeEach(waitForAsync(() => {

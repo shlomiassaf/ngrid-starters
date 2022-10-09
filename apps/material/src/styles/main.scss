@@ -3,8 +3,8 @@
 @use '@angular/material' as mat;
 
 // Custom Theming for NGrid Material
-@use '~@pebula/ngrid' as ngrid;
-@use '~@pebula/ngrid-material' as ngrid-material;
+@use '@pebula/ngrid' as ngrid;
+@use '@pebula/ngrid-material' as ngrid-material;
 
 $typography-config: mat.define-typography-config();
 $ngrid-material-starter-primary: mat.define-palette(mat.$indigo-palette);
