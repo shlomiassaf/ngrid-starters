@@ -51,21 +51,18 @@ export class AppModuleShared {
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    CommonTableTemplatesComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    CommonModule,
-    AppModuleShared
-  ],
-  providers: [
-  ],
-  // TODO: Remove when not supporting ViewEngine, this is for non IVY compilations
-  entryComponents: [ CommonTableTemplatesComponent ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        CommonTableTemplatesComponent
+    ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        CommonModule,
+        AppModuleShared
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }
